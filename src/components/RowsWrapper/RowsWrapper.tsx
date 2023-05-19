@@ -1,25 +1,27 @@
 import React from 'react'
 import './RowsWrapper.css'
-import Row from '../Row/Row';
+import Row from '../Row/Row'
 
-const RowsWrapper: React.FC = (props) => {
+const RowsWrapper: React.FC = (_, ref) => {
   return (
-    <table className='rowsWrapper'>
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
+    <table className='rowsWrapper' ref={ ref }>
+      <tbody>
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+      </tbody>
     </table>
   );
 };
 
 
-export default RowsWrapper;
+export default React.forwardRef(
+  RowsWrapper as React.ForwardRefRenderFunction<unknown, {}>
+);

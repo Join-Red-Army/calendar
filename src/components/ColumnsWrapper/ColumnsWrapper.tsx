@@ -3,19 +3,27 @@ import Column from '../Column'
 import './ColumnsWrapper.css'
 
 
-const ColumnsWrapper = () => {
+const ColumnsWrapper = (_, ref) => {
 
   return (
-    <table className='columnsWrapper'>
-      <tr>
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-      </tr>
+    <table className='columnsWrapper' ref={ref}>
+      <tbody>
+        <tr>
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+        </tr>
+      </tbody>
     </table>
   );
 };
 
 
-export default ColumnsWrapper;
+export default React.forwardRef(ColumnsWrapper);
