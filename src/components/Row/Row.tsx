@@ -5,7 +5,7 @@ import  './Row.css'
 
 const Row = () => {
   return (
-    <tr className="row">
+    <tr className="Row">
       <td>
         <div className='row__ballast' />
       </td>

@@ -16,6 +16,12 @@ const RowsWrapper: React.FC = (_, ref) => {
         <Row />
         <Row />
         <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
       </tbody>
     </table>
   );

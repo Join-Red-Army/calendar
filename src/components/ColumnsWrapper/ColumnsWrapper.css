@@ -1,7 +1,7 @@
 .columnsWrapper {
   border-collapse: collapse;
   height: 100%;
-  /* min-width: 20vw; */
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;

@@ -1,6 +1,10 @@
 .column {
   border: 1px dashed #979797;
   padding: 0;
-  width: auto;
   min-width: 50px;
 }
+
+/* .column__ballast {
+  min-width: 49px;
+  visibility: hidden;
+} */

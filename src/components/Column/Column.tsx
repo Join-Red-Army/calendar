@@ -4,7 +4,9 @@ import './Column.css'
 
 const Column = () => {
   return (
-    <td className='column'></td>
+    <td className='column'>
+      <div className='column__ballast'></div>
+    </td>
   );
 };
 

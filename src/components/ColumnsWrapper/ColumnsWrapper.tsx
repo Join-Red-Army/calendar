@@ -19,6 +19,15 @@ const ColumnsWrapper = (_, ref) => {
           <Column />
           <Column />
           <Column />
+
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
+          <Column />
         </tr>
       </tbody>
     </table>
