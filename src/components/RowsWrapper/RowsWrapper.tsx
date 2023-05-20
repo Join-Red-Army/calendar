@@ -1,6 +1,6 @@
 import React from 'react'
 import './RowsWrapper.css'
-import Row from '../Row/Row'
+import Row from '../Row'
 
 const RowsWrapper: React.FC = (_, ref) => {
   return (

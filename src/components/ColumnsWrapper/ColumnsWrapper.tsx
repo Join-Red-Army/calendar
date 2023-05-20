@@ -3,7 +3,7 @@ import Column from '../Column'
 import './ColumnsWrapper.css'
 
 
-const ColumnsWrapper = (_, ref) => {
+const ColumnsWrapper: React.FC = (_, ref) => {
 
   return (
     <table className='columnsWrapper' ref={ref}>
@@ -35,4 +35,6 @@ const ColumnsWrapper = (_, ref) => {
 };
 
 
-export default React.forwardRef(ColumnsWrapper);
+export default React.forwardRef(
+  ColumnsWrapper as React.ForwardRefRenderFunction<unknown, {}>
+);

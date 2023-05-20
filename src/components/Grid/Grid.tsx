@@ -6,12 +6,11 @@ import './Grid.css'
 
 const Grid = () => {
   
-  const colsWrapperRef = useRef(null);
-  const rowsWrapperRef = useRef(null);
+  const colsWrapperRef = useRef<HTMLInputElement>(null);
+  const rowsWrapperRef = useRef<HTMLInputElement>(null);
 
-
-  const [ gridHeigth, setGridHeight ] = useState();
-  const [ gridWidth, setGridWidth ] = useState();
+  const [ gridHeigth, setGridHeight ] = useState<number>(0);
+  const [ gridWidth, setGridWidth ] = useState<number>(0);
 
   useEffect(
     () => {

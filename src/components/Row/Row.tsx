@@ -3,7 +3,7 @@ import  './Row.css'
 
 // row__ballast - чтобы для row работал min-height
 
-const Row = () => {
+const Row: React.FC = () => {
   return (
     <tr className="Row">
       <td>
