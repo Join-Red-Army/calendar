@@ -1,13 +1,15 @@
 import React from 'react';
-// import logo from './logo.svg';
+import ButtonAddColumn from '../ButtonAddColumn';
 import './App.css';
 
 import Grid from '../Grid';
+
 
 function App() {
   return (
     <div className="App">
       <Grid />
+      <ButtonAddColumn />
     </div>
   );
 }

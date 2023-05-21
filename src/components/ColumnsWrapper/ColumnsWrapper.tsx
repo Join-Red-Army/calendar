@@ -1,33 +1,22 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Column from '../Column'
 import './ColumnsWrapper.css'
+import { useAppSelector } from '../../redux/hooks';
 
 
 const ColumnsWrapper: React.FC = (_, ref) => {
+  const { columnCount } = useAppSelector((state) => state.columnsWrapperReducer);
+
+  const columns: JSX.Element[] = useMemo (
+    () => Array(columnCount).fill(<Column/>),
+    [ columnCount ]
+  );
 
   return (
     <table className='columnsWrapper' ref={ref}>
       <tbody>
         <tr>
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
-          <Column />
+          { columns }
         </tr>
       </tbody>
     </table>

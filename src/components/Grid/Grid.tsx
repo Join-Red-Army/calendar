@@ -1,10 +1,12 @@
-import React, { useRef, useMemo, useState, useEffect } from 'react'
+import React, { useRef, useMemo, useState, useEffect, useLayoutEffect } from 'react'
 import ColumnsWrapper from '../ColumnsWrapper';
 import RowsWrapper from '../RowsWrapper';
 import './Grid.css'
+import { useAppSelector } from '../../redux/hooks';
 
 
 const Grid = () => {
+  const { columnCount } = useAppSelector(state => state.columnsWrapperReducer);
   
   const colsWrapperRef = useRef<HTMLInputElement>(null);
   const rowsWrapperRef = useRef<HTMLInputElement>(null);
@@ -12,11 +14,11 @@ const Grid = () => {
   const [ gridHeigth, setGridHeight ] = useState<number>(0);
   const [ gridWidth, setGridWidth ] = useState<number>(0);
 
-  useEffect(
+  useLayoutEffect(
     () => {
       if (!colsWrapperRef.current) return;
       setGridWidth(colsWrapperRef.current.offsetWidth);
-    }, [ colsWrapperRef ]
+    }, [ colsWrapperRef, columnCount ]
   );
 
   useEffect(
