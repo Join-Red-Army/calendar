@@ -6,8 +6,9 @@ import { useAppSelector } from '../../redux/hooks';
 
 
 const Grid = () => {
-  const { columnCount } = useAppSelector(state => state.columnsWrapperReducer);
-  
+  const { columnCount } = useAppSelector(state => state.columns);
+  const { rowCount } = useAppSelector(state => state.rows);
+
   const colsWrapperRef = useRef<HTMLInputElement>(null);
   const rowsWrapperRef = useRef<HTMLInputElement>(null);
 
@@ -25,7 +26,7 @@ const Grid = () => {
     () => {
       if (!rowsWrapperRef.current) return;
       setGridHeight(rowsWrapperRef.current.offsetHeight);
-    }, [ rowsWrapperRef ]
+    }, [ rowsWrapperRef, rowCount ]
   );
 
   const style = useMemo(

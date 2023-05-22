@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import columnsWrapperReducer from './slices/columnsWrapperSlice';
+import rowsWrapperReducer from './slices/rowsWrapperSlice';
 
 export const store = configureStore({
-  reducer: { 
-    columnsWrapperReducer
+  reducer: {
+    rows: rowsWrapperReducer,
+    columns: columnsWrapperReducer
    }
 });
 

@@ -1,15 +1,14 @@
 import React from 'react';
-import ButtonAddColumn from '../ButtonAddColumn';
 import './App.css';
 
 import Grid from '../Grid';
-
+import ButtonsSection from '../ButtonsSection';
 
 function App() {
   return (
     <div className="App">
+      <ButtonsSection />
       <Grid />
-      <ButtonAddColumn />
     </div>
   );
 }

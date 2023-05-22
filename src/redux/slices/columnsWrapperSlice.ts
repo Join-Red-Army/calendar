@@ -9,7 +9,6 @@ const initialState: IColumnsWrapperState = {
   columnCount: 5
 };
 
-
 export const counterSlice = createSlice({
   name: 'columnsWrapper',
   initialState,

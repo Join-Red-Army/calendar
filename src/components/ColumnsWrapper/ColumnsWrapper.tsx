@@ -5,7 +5,7 @@ import { useAppSelector } from '../../redux/hooks';
 
 
 const ColumnsWrapper: React.FC = (_, ref) => {
-  const { columnCount } = useAppSelector((state) => state.columnsWrapperReducer);
+  const { columnCount } = useAppSelector((state) => state.columns);
 
   const columns: JSX.Element[] = useMemo (
     () => Array(columnCount).fill(<Column/>),

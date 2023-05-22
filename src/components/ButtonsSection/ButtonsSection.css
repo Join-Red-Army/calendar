@@ -1,0 +1,10 @@
+.ButtonsSection {
+  display: flex;
+  gap: 10px;
+}
+
+.ButtonsSection__block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
