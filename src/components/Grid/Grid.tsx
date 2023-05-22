@@ -18,14 +18,14 @@ const Grid = () => {
   useLayoutEffect(
     () => {
       if (!colsWrapperRef.current) return;
-      setGridWidth(colsWrapperRef.current.offsetWidth);
+      setGridWidth(columnCount * 50);
     }, [ colsWrapperRef, columnCount ]
   );
 
   useEffect(
     () => {
       if (!rowsWrapperRef.current) return;
-      setGridHeight(rowsWrapperRef.current.offsetHeight);
+      setGridHeight(rowCount * 50);
     }, [ rowsWrapperRef, rowCount ]
   );
 
